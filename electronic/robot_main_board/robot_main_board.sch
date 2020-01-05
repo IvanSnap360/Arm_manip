@@ -8828,6 +8828,9 @@ type RDH, grid 15 mm</description>
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="J18" library="SparkFun-Connectors" deviceset="CONN_07" device=""/>
 <part name="J19" library="SparkFun-Connectors" deviceset="CONN_05" device=""/>
+<part name="J20" library="SparkFun-Connectors" deviceset="CONN_02" device="POLAR" value="power"/>
+<part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8887,6 +8890,9 @@ type RDH, grid 15 mm</description>
 <instance part="+3V2" gate="G$1" x="76.2" y="149.86"/>
 <instance part="J18" gate="G$1" x="127" y="180.34" rot="R180"/>
 <instance part="J19" gate="G$1" x="149.86" y="48.26" rot="R180"/>
+<instance part="J20" gate="G$1" x="50.8" y="182.88" rot="R270"/>
+<instance part="GND12" gate="1" x="43.18" y="170.18" rot="R270"/>
+<instance part="P+13" gate="1" x="60.96" y="170.18" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -9148,7 +9154,6 @@ type RDH, grid 15 mm</description>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="60.96" y1="142.24" x2="60.96" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="B1" gate="B1" pin="GND"/>
-<wire x1="60.96" y1="139.7" x2="60.96" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="137.16" x2="83.82" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="B1" gate="B1" pin="GND@2"/>
 <wire x1="83.82" y1="139.7" x2="60.96" y2="139.7" width="0.1524" layer="91"/>
@@ -9203,6 +9208,12 @@ type RDH, grid 15 mm</description>
 <junction x="86.36" y="180.34"/>
 <pinref part="J18" gate="G$1" pin="2"/>
 <pinref part="J18" gate="G$1" pin="3"/>
+</segment>
+<segment>
+<pinref part="GND12" gate="1" pin="GND"/>
+<pinref part="J20" gate="G$1" pin="1"/>
+<wire x1="45.72" y1="170.18" x2="50.8" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="170.18" x2="50.8" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -9660,6 +9671,12 @@ type RDH, grid 15 mm</description>
 <pinref part="B1" gate="B1" pin="VIN"/>
 <wire x1="58.42" y1="137.16" x2="58.42" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="134.62" x2="83.82" y2="134.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J20" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="175.26" x2="53.34" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="P+13" gate="1" pin="V+"/>
+<wire x1="53.34" y1="170.18" x2="58.42" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
